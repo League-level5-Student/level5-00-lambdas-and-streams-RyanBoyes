@@ -6,44 +6,45 @@ public class LambdaMethods {
 	
 		// Here is an example of calling the printCustomMessage method with a lambda.
 		// This prints the passed in String 10 times.
-		/*
+		
 		printCustomMessage((s)->{
 			for(int i = 0; i < 10; i++) {
 				System.out.println(s);
 			}
 		}, "repeat");
-		*/
+		
 		
 		//2. Call the printCustonMessage method using a lambda so that the String prints backwards.
-		/*
+		
 		printCustomMessage((s)->{
 			for (int i = s.length()-1; i >=0; i--) {
 				System.out.println(s.charAt(i));
 			}
 			
 		}, "String");
-		*/
+		
 		
 		//3. Call the printCustonMessage method using a lambda so that the String prints with a mix between upper an lower case characters.
-		/*
+		
 		printCustomMessage((s)->{
+			String newS = "";
 			for (int i = 0; i < s.length(); i++) {
 				if(i%2==0) {
 				
-				System.out.println(s.substring(i, i+1).toUpperCase());
+				newS = newS + s.substring(i, i+1).toUpperCase();
 				}
 				else if(i%2==1) {
 					s.toLowerCase();
-					System.out.println(s.substring(i, i+1).toLowerCase());
+					newS = newS + s.substring(i, i+1).toLowerCase();
 					
 				}
 			}
-			
+			System.out.println(newS);
 		}, "String");
-		*/
+		
 		
 		//4. Call the printCustonMessage method using a lambda so that the String prints with a period in between each character.
-		/*
+		
 		printCustomMessage((s)->{
 			String[] a = new String[s.length()];
 			String newS = "";
@@ -55,7 +56,7 @@ public class LambdaMethods {
 			System.out.println(newS);
 			
 		}, "String");
-		*/
+		
 		//5. Call the printCustonMessage method using a lambda so that the String prints without any vowels.
 		printCustomMessage((s)->{
 		char[] a = s.toCharArray();
